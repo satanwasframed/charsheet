@@ -1,0 +1,1223 @@
+<div>
+	<!-- Set up the Tabs -->
+	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Core" checked="checked"/> 
+	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>CORE</span>
+	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Equipment" /> 
+	<span class="sheet-tab sheet-tab2" style='line-height: 40px;'>GEAR</span>
+	<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Spells" /> 
+	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>SPELLS</span>
+	<!-- End Tab setup -->
+	
+	<div class="sheet-section-core"><!-- Core Tab -->
+		<!-- Stuff on the tab -->
+
+        Name: <input type="text" name="attr_character_name"/> Race: <input type="text" name="attr_race"/>
+        <table>
+            <tr>
+                <td >
+                    Profession (Lvl)
+                    <textarea name="attr_profession" class="small"></textarea>
+                </td>
+                <td rowspan="2" colspan="3">
+                    <table>
+                        <tr>
+                            <th>Stats</th>
+                            <th>Bonus</th>
+                            <th>Race</th>
+                            <th>Special</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td>Strength</td>
+                            <td><input type="number" name="attr_strengthbonus" value="0"/></td>
+                            <td><input type="number" name="attr_strengthrace" value="0"/></td>
+                            <td><input type="number" name="attr_strengthspecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_strength" value="@{strengthbonus}+@{strengthrace}+@{strengthspecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity</td>
+                            <td><input type="number" name="attr_dexteritybonus" value="0"/></td>
+                            <td><input type="number" name="attr_dexterityrace" value="0"/></td>
+                            <td><input type="number" name="attr_dexterityspecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_dexterity" value="@{dexteritybonus}+@{dexterityrace}+@{dexterityspecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Fortitude</td>
+                            <td><input type="number" name="attr_fortitudebonus" value="0"/></td>
+                            <td><input type="number" name="attr_fortituderace" value="0"/></td>
+                            <td><input type="number" name="attr_fortitudespecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_fortitude" value="@{fortitudebonus}+@{fortituderace}+@{fortitudespecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Logic</td>
+                            <td><input type="number" name="attr_logicbonus" value="0"/></td>
+                            <td><input type="number" name="attr_logicrace" value="0"/></td>
+                            <td><input type="number" name="attr_logicspecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_logic" value="@{logicbonus}+@{logicrace}+@{logicspecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Wits</td>
+                            <td><input type="number" name="attr_witsbonus" value="0"/></td>
+                            <td><input type="number" name="attr_witsrace" value="0"/></td>
+                            <td><input type="number" name="attr_witsspecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_wits" value="@{witsbonus}+@{witsrace}+@{witsspecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Resolve</td>
+                            <td><input type="number" name="attr_resolvebonus" value="0"/></td>
+                            <td><input type="number" name="attr_resolverace" value="0"/></td>
+                            <td><input type="number" name="attr_resolvespecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_resolve" value="@{resolvebonus}+@{resolverace}+@{resolvespecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Presence</td>
+                            <td><input type="number" name="attr_presencebonus" value="0"/></td>
+                            <td><input type="number" name="attr_presencerace" value="0"/></td>
+                            <td><input type="number" name="attr_presencespecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_presence" value="@{presencebonus}+@{presencerace}+@{presencespecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Manipulate</td>
+                            <td><input type="number" name="attr_manipulatebonus" value="0"/></td>
+                            <td><input type="number" name="attr_manipulaterace" value="0"/></td>
+                            <td><input type="number" name="attr_manipulatespecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_manipulate" value="@{manipulatebonus}+@{manipulaterace}+@{manipulatespecial}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Confidence</td>
+                            <td><input type="number" name="attr_confidencebonus" value="0"/></td>
+                            <td><input type="number" name="attr_confidencerace" value="0"/></td>
+                            <td><input type="number" name="attr_confidencespecial" value="0"/></td>
+                            <td><input type="number" disabled="disabled" name="attr_confidence" value="@{confidencebonus}+@{confidencerace}+@{confidencespecial}"/></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="smallcolumn">
+                    <table>
+                        <tr>
+                            <td class="right">Ttl Lvl</td>
+                            <td colspan=2><input name="attr_ttllvl" class="fill"/></td>
+                            <td width="20px">XP</td>
+                            <td colspan=3><input name="attr_xp" class="fill"/></td>
+                        </tr>
+                        <tr>
+                            <td class="right">Culture</td>
+                            <td colspan=6 ><input name="attr_culture" class="fill"/></td>
+                        </tr>
+                        <tr>
+                            <td class="right">Height</td>
+                            <td><input name="attr_height" class="short"/></td>
+                            <td class="right">Weight</td>
+                            <td colspan=2><input name="attr_weight" class="short"/></td>
+                            <td class="right">Age</td>
+                            <td><input name="attr_age" class="short"/></td>
+                        </tr>
+                        <tr>
+                            <td class="right">Eyes</td>
+                            <td><input name="attr_eyes" class="short"/></td>
+                            <td class="right">Hair</td>
+                            <td colspan=2><input name="attr_hair" class="short"/></td>
+                            <td class="right">Sex</td>
+                            <td><input name="attr_sex" class="short"/></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="topalign" colspan="2">
+                    <table>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Ranks</th>
+                            <th>Bonus</th>
+                            <th>Special</th>
+                            <th>Modifier</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Academic</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_appraisal_check" type="roll" value="/me rolls Appraisal [[1d100+@{appraisal}]]"></button>
+        						Appraisal
+        					</td>
+                            <td><input name="attr_appraisal_ranks" type="number"></td>
+                            <td><input name="attr_appraisal_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_appraisal_special" type="number" value="0"></td>
+                            <td><input name="attr_appraisal_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_appraisal" type="number" disabled="disabled" value="@{appraisal_bonus}+@{logic}+@{wits}+@{appraisal_special}+@{appraisal_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_chemistry_check" type="roll" value="/me rolls Chemistry: [[1d100+@{chemistry}]]"></button>
+        						Chemistry
+        					</td>
+                            <td><input name="attr_chemistry_ranks" type="number"></td>
+                            <td><input name="attr_chemistry_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_chemistry_special" type="number" value="0"></td>
+                            <td><input name="attr_chemistry_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_chemistry" type="number" disabled="disabled" value="@{chemistry_bonus}+@{logic}+@{wits}+@{chemistry_special}+@{chemistry_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_cultures_check" type="roll" value="/me rolls Cultures: [[1d100+@{cultures}]]"></button>
+        						Cultures
+        					</td>
+                            <td><input name="attr_cultures_ranks" type="number"></td>
+                            <td><input name="attr_cultures_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_cultures_special" type="number" value="0"></td>
+                            <td><input name="attr_cultures_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_cultures" type="number" disabled="disabled" value="@{cultures_bonus}+@{wits}+@{presence}+@{cultures_special}+@{cultures_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_history_check" type="roll" value="/me rolls History: [[1d100+@{history}]]"></button>
+        						History
+        					</td>
+                            <td><input name="attr_history_ranks" type="number"></td>
+                            <td><input name="attr_history_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_history_special" type="number" value="0"></td>
+                            <td><input name="attr_history_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_history" type="number" disabled="disabled" value="@{history_bonus}+@{logic}+@{resolve}+@{history_special}+@{history_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_investigation_check" type="roll" value="/me rolls Investigation: [[1d100+@{investigation}]]"></button>
+        						Investigation
+        					</td>
+                            <td><input name="attr_investigation_ranks" type="number"></td>
+                            <td><input name="attr_investigation_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_investigation_special" type="number" value="0"></td>
+                            <td><input name="attr_investigation_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_investigation" type="number" disabled="disabled" value="@{investigation_bonus}+@{wits}+@{presence}+@{investigation_special}+@{investigation_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_medicine_check" type="roll" value="/me rolls Medicine: [[1d100+@{medicine}]]"></button>
+        						Medicine
+        					</td>
+                            <td><input name="attr_medicine_ranks" type="number"></td>
+                            <td><input name="attr_medicine_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_medicine_special" type="number" value="0"></td>
+                            <td><input name="attr_medicine_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_medicine" type="number" disabled="disabled" value="@{medicine_bonus}+@{wits}+@{confidence}+@{medicine_special}+@{medicine_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_nature_check" type="roll" value="/me rolls Nature: [[1d100+@{nature}]]"></button>
+        						Nature
+        					</td>
+                            <td><input name="attr_nature_ranks" type="number"></td>
+                            <td><input name="attr_nature_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_nature_special" type="number" value="0"></td>
+                            <td><input name="attr_nature_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_nature" type="number" disabled="disabled" value="@{nature_bonus}+@{wits}+@{resolve}+@{nature_special}+@{nature_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_pantheons_check" type="roll" value="/me rolls Pantheons: [[1d100+@{pantheons}]]"></button>
+        						Pantheons
+        					</td>
+                            <td><input name="attr_pantheons_ranks" type="number"></td>
+                            <td><input name="attr_pantheons_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_pantheons_special" type="number" value="0"></td>
+                            <td><input name="attr_pantheons_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_pantheons" type="number" disabled="disabled" value="@{pantheons_bonus}+@{resolve}+@{presence}+@{pantheons_special}+@{pantheons_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_politics_check" type="roll" value="/me rolls Politics: [[1d100+@{politics}]]"></button>
+        						Politics
+        					</td>
+                            <td><input name="attr_politics_ranks" type="number"></td>
+                            <td><input name="attr_politics_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_politics_special" type="number" value="0"></td>
+                            <td><input name="attr_politics_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_politics" type="number" disabled="disabled" value="@{politics_bonus}+@{logic}+@{wits}+@{politics_special}+@{politics_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Artistic</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_acting_check" type="roll" value="/me rolls Acting: [[1d100+@{acting}]]"></button>
+        						Acting
+        					</td>
+                            <td><input name="attr_acting_ranks" type="number"></td>
+                            <td><input name="attr_acting_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_acting_special" type="number" value="0"></td>
+                            <td><input name="attr_acting_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_acting" type="number" disabled="disabled" value="@{acting_bonus}+@{presence}+@{confidence}+@{acting_special}+@{acting_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_crafting_check" type="roll" value="/me rolls Crafting: [[1d100+@{crafting}]]"></button>
+        						Crafting
+        					</td>
+                            <td><input name="attr_crafting_ranks" type="number"></td>
+                            <td><input name="attr_crafting_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_crafting_special" type="number" value="0"></td>
+                            <td><input name="attr_crafting_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_crafting" type="number" disabled="disabled" value="@{crafting_bonus}+@{dexterity}+@{wits}+@{crafting_special}+@{crafting_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_dancing_check" type="roll" value="/me rolls Dancing: [[1d100+@{dancing}]]"></button>
+        						Dancing
+        					</td>
+                            <td><input name="attr_dancing_ranks" type="number"></td>
+                            <td><input name="attr_dancing_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_dancing_special" type="number" value="0"></td>
+                            <td><input name="attr_dancing_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_dancing" type="number" disabled="disabled" value="@{dancing_bonus}+@{dexterity}+@{confidence}+@{dancing_special}+@{dancing_mod}&{template:default}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_mimicry_check" type="roll" value="/me rolls Mimicry: [[1d100+@{mimicry}]]"></button>
+        						Mimicry
+        					</td>
+                            <td><input name="attr_mimicry_ranks" type="number"></td>
+                            <td><input name="attr_mimicry_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_mimicry_special" type="number" value="0"></td>
+                            <td><input name="attr_mimicry_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_mimicry" type="number" disabled="disabled" value="@{mimicry_bonus}+@{presence}+@{manipulate}+@{mimicry_special}+@{mimicry_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_instruments_check" type="roll" value="/me rolls Instruments: [[1d100+@{instruments}]]"></button>
+        						Instruments
+        					</td>
+                            <td><input name="attr_instruments_ranks" type="number"></td>
+                            <td><input name="attr_instruments_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_instruments_special" type="number" value="0"></td>
+                            <td><input name="attr_instruments_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_instruments" type="number" disabled="disabled" value="@{instruments_bonus}+@{dexterity}+@{presence}+@{instruments_special}+@{instruments_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_publicspeaking_check" type="roll" value="/me rolls Public Speaking: [[1d100+@{publicspeaking}]]"></button>
+        						Public Speaking
+        					</td>
+                            <td><input name="attr_publicspeaking_ranks" type="number"></td>
+                            <td><input name="attr_publicspeaking_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_publicspeaking_special" type="number" value="0"></td>
+                            <td><input name="attr_publicspeaking_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_publicspeaking" type="number" disabled="disabled" value="@{publicspeaking_bonus}+@{presence}+@{resolve}+@{publicspeaking_special}+@{publicspeaking_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_singing_check" type="roll" value="/me rolls Singing: [[1d100+@{singing}]]"></button>
+        						Singing
+        					</td>
+                            <td><input name="attr_singing_ranks" type="number"></td>
+                            <td><input name="attr_singing_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_singing_special" type="number" value="0"></td>
+                            <td><input name="attr_singing_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_singing" type="number" disabled="disabled" value="@{singing_bonus}+@{presence}+@{fortitude}+@{singing_special}+@{singing_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_storytelling_check" type="roll" value="/me rolls Storytelling: [[1d100+@{storytelling}]]"></button>
+        						Storytelling
+        					</td>
+                            <td><input name="attr_storytelling_ranks" type="number"></td>
+                            <td><input name="attr_storytelling_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_storytelling_special" type="number" value="0"></td>
+                            <td><input name="attr_storytelling_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_storytelling" type="number" disabled="disabled" value="@{storytelling_bonus}+@{presence}+@{wits}+@{storytelling_special}+@{storytelling_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_trickery_check" type="roll" value="/me rolls Trickery: [[1d100+@{trickery}]]"></button>
+        						Trickery
+        					</td>
+                            <td><input name="attr_trickery_ranks" type="number"></td>
+                            <td><input name="attr_trickery_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_trickery_special" type="number" value="0"></td>
+                            <td><input name="attr_trickery_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_trickery" type="number" disabled="disabled" value="@{trickery_bonus}+@{dexterity}+@{wits}+@{trickery_special}+@{trickery_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Combat</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_armor_check" type="roll" value="/me rolls Armor: [[1d100+@{armor}]]"></button>
+        						Armor
+        					</td>
+                            <td><input name="attr_armor_ranks" type="number"></td>
+                            <td><input name="attr_armor_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_armor_special" type="number" value="0"></td>
+                            <td><input name="attr_armor_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_armor" type="number" disabled="disabled" value="@{armor_bonus}+@{dexterity}+@{fortitude}+@{armor_special}+@{armor_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_brawling_check" type="roll" value="/me rolls Brawling: [[1d100+@{brawling}]]"></button>
+        						Brawling
+        					</td>
+                            <td><input name="attr_brawling_ranks" type="number"></td>
+                            <td><input name="attr_brawling_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_brawling_special" type="number" value="0"></td>
+                            <td><input name="attr_brawling_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_brawling" type="number" disabled="disabled" value="@{brawling_bonus}+@{strength}+@{confidence}+@{brawling_special}+@{brawling_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_conditioning_check" type="roll" value="/me rolls Conditioning: [[1d100+@{conditioning}]]"></button>
+        						Conditioning
+        					</td>
+                            <td><input name="attr_conditioning_ranks" type="number"></td>
+                            <td><input name="attr_conditioning_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_conditioning_special" type="number" value="0"></td>
+                            <td><input name="attr_conditioning_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_conditioning" type="number" disabled="disabled" value="@{conditioning_bonus}+@{fortitude}+@{resolve}+@{conditioning_special}+@{conditioning_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_initiative_check" type="roll" value="/me rolls Initiative: [[1d100+@{initiative}]]"></button>
+        						Initiative
+        					</td>
+                            <td><input name="attr_initiative_ranks" type="number"></td>
+                            <td><input name="attr_initiative_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_initiative_special" type="number" value="0"></td>
+                            <td><input name="attr_initiative_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_initiative" type="number" disabled="disabled" value="@{initiative_bonus}+@{dexterity}+@{wits}+@{initiative_special}+@{initiative_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_martialarts_check" type="roll" value="/me rolls Martial Arts: [[1d100+@{martialarts}]]"></button>
+        						Martial Arts
+        					</td>
+                            <td><input name="attr_martialarts_ranks" type="number"></td>
+                            <td><input name="attr_martialarts_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_martialarts_special" type="number" value="0"></td>
+                            <td><input name="attr_martialarts_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_martialarts" type="number" disabled="disabled" value="@{martialarts_bonus}+@{dexterity}+@{resolve}+@{martialarts_special}+@{martialarts_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_reflexes_check" type="roll" value="/me rolls Reflexes: [[1d100+@{reflexes}]]"></button>
+        						Reflexes
+        					</td>
+                            <td><input name="attr_reflexes_ranks" type="number"></td>
+                            <td><input name="attr_reflexes_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_reflexes_special" type="number" value="0"></td>
+                            <td><input name="attr_reflexes_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_reflexes" type="number" disabled="disabled" value="@{reflexes_bonus}+@{dexterity}+@{wits}+@{reflexes_special}+@{reflexes_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_weaponry_check" type="roll" value="/me rolls Weaponry: [[1d100+@{weaponry}]]"></button>
+        						Weaponry
+        					</td>
+                            <td><input name="attr_weaponry_ranks" type="number"></td>
+                            <td><input name="attr_weaponry_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_weaponry_special" type="number" value="0"></td>
+                            <td><input name="attr_weaponry_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_weaponry" type="number" disabled="disabled" value="@{weaponry_bonus}+@{strength}+@{dexterity}+@{weaponry_special}+@{weaponry_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Ki Art</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_rageofberserker_check" type="roll" value="/me rolls Rage of Berserker: [[1d100+@{rageofberserker}]]"></button>
+        						Rage of Berserker
+        					</td>
+                            <td><input name="attr_rageofberserker_ranks" type="number"></td>
+                            <td><input name="attr_rageofberserker_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_rageofberserker_special" type="number" value="0"></td>
+                            <td><input name="attr_rageofberserker_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_rageofberserker" type="number" disabled="disabled" value="@{rageofberserker_bonus}+@{fortitude}+@{resolve}+@{rageofberserker_special}+@{rageofberserker_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_burstofcelerity_check" type="roll" value="/me rolls Burst of Celerity: [[1d100+@{burstofcelerity}]]"></button>
+        						Burst of Celerity
+        					</td>
+                            <td><input name="attr_burstofcelerity_ranks" type="number"></td>
+                            <td><input name="attr_burstofcelerity_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_burstofcelerity_special" type="number" value="0"></td>
+                            <td><input name="attr_burstofcelerity_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_burstofcelerity" type="number" disabled="disabled" value="@{burstofcelerity_bonus}+@{dexterity}+@{resolve}+@{burstofcelerity_special}+@{burstofcelerity_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_perfectionoffocus_check" type="roll" value="/me rolls Perfection of Focus: [[1d100+@{perfectionoffocus}]]"></button>
+        						Perfection of Focus
+        					</td>
+                            <td><input name="attr_perfectionoffocus_ranks" type="number"></td>
+                            <td><input name="attr_perfectionoffocus_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_perfectionoffocus_special" type="number" value="0"></td>
+                            <td><input name="attr_perfectionoffocus_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_perfectionoffocus" type="number" disabled="disabled" value="@{perfectionoffocus_bonus}+@{logic}+@{confidence}+@{perfectionoffocus_special}+@{perfectionoffocus_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_bodyofiron_check" type="roll" value="/me rolls Body of Iron: [[1d100+@{bosyofiron}]]"></button>
+        						Body of Iron
+        					</td>
+                            <td><input name="attr_bodyofiron_ranks" type="number"></td>
+                            <td><input name="attr_bodyofiron_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_bodyofiron_special" type="number" value="0"></td>
+                            <td><input name="attr_bodyofiron_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_bodyofiron" type="number" disabled="disabled" value="@{bodyofiron_bonus}+@{fortitude}+@{confidence}+@{bodyofiron_special}+@{bodyofiron_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Magic</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_alchemy_check" type="roll" value="/me rolls Alchemy: [[1d100+@{alchemy}]]"></button>
+        						Alchemy
+        					</td>
+                            <td><input name="attr_alchemy_ranks" type="number"></td>
+                            <td><input name="attr_alchemy_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_alchemy_special" type="number" value="0"></td>
+                            <td><input name="attr_alchemy_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_alchemy" type="number" disabled="disabled" value="@{alchemy_bonus}+@{logic}+@{wits}+@{alchemy_special}+@{alchemy_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_arcana_check" type="roll" value="/me rolls Arcana: [[1d100+@{arcana}]]"></button>
+        						Arcana
+        					</td>
+                            <td><input name="attr_arcana_ranks" type="number"></td>
+                            <td><input name="attr_arcana_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_arcana_special" type="number" value="0"></td>
+                            <td><input name="attr_arcana_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_arcana" type="number" disabled="disabled" value="@{arcana_bonus}+@{logic}+@{wits}+@{arcana_special}+@{arcana_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_attunement_check" type="roll" value="/me rolls Attunement: [[1d100+@{attunement}]]"></button>
+        						Attunement
+        					</td>
+                            <td><input name="attr_attunement_ranks" type="number"></td>
+                            <td><input name="attr_attunement_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_attunement_special" type="number" value="0"></td>
+                            <td><input name="attr_attunement_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_attunement" type="number" disabled="disabled" value="@{attunement_bonus}+@{logic}+@{presence}+@{attunement_special}+@{attunement_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_cantrips_check" type="roll" value="/me rolls Cantrips: [[1d100+@{cantrips}]]"></button>
+        						Cantrips
+        					</td>
+                            <td><input name="attr_cantrips_ranks" type="number"></td>
+                            <td><input name="attr_cantrips_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_cantrips_special" type="number" value="0"></td>
+                            <td><input name="attr_cantrips_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_cantrips" type="number" disabled="disabled" value="@{cantrips_bonus}+@{wits}+@{manipulate}+@{cantrips_special}+@{cantrips_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_casting_check" type="roll" value="/me rolls Casting: [[1d100+@{casting}]]"></button>
+        						Casting
+        					</td>
+                            <td><input name="attr_casting_ranks" type="number"></td>
+                            <td><input name="attr_casting_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_casting_special" type="number" value="0"></td>
+                            <td><input name="attr_casting_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_casting" type="number" disabled="disabled" value="@{casting_bonus}+@{logic}+@{manipulate}+@{casting_special}+@{casting_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_mana_check" type="roll" value="/me rolls Mana: [[1d100+@{mana}]]"></button>
+        						Mana
+        					</td>
+                            <td><input name="attr_mana_ranks" type="number"></td>
+                            <td><input name="attr_mana_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_mana_special" type="number" value="0"></td>
+                            <td><input name="attr_mana_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_mana" type="number" disabled="disabled" value="@{mana_bonus}+@{logic}+@{resolve}+@{mana_special}+@{mana_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_ritual_check" type="roll" value="/me rolls Ritual: [[1d100+@{ritual}]]"></button>
+        						Ritual
+        					</td>
+                            <td><input name="attr_ritual_ranks" type="number"></td>
+                            <td><input name="attr_ritual_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_ritual_special" type="number" value="0"></td>
+                            <td><input name="attr_ritual_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_ritual" type="number" disabled="disabled" value="@{ritual_bonus}+@{logic}+@{confidence}+@{ritual_special}+@{ritual_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_runes_check" type="roll" value="/me rolls Runes: [[1d100+@{runes}]]"></button>
+        						Runes
+        					</td>
+                            <td><input name="attr_runes_ranks" type="number"></td>
+                            <td><input name="attr_runes_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_runes_special" type="number" value="0"></td>
+                            <td><input name="attr_runes_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_runes" type="number" disabled="disabled" value="@{runes_bonus}+@{dexterity}+@{wits}+@{runes_special}+@{runes_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_signaling_check" type="roll" value="/me rolls Signalling: [[1d100+@{signalling}]]"></button>
+        						Signaling
+        					</td>
+                            <td><input name="attr_signaling_ranks" type="number"></td>
+                            <td><input name="attr_signaling_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_signaling_special" type="number" value="0"></td>
+                            <td><input name="attr_signaling_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_signaling" type="number" disabled="disabled" value="@{signaling_bonus}+@{dexterity}+@{wits}+@{signaling_special}+@{signaling_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_wandage_check" type="roll" value="/me rolls Wandage: [[1d100+@{wandage}]]"></button>
+        						Wandage
+        					</td>
+                            <td><input name="attr_wandage_ranks" type="number"></td>
+                            <td><input name="attr_wandage_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_wandage_special" type="number" value="0"></td>
+                            <td><input name="attr_wandage_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_wandage" type="number" disabled="disabled" value="@{wandage_bonus}+@{dexterity}+@{logic}+@{wandage_special}+@{wandage_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_warding_check" type="roll" value="/me rolls Warding: [[1d100+@{warding}]]"></button>
+        						Warding
+        					</td>
+                            <td><input name="attr_warding_ranks" type="number"></td>
+                            <td><input name="attr_warding_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_warding_special" type="number" value="0"></td>
+                            <td><input name="attr_warding_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_warding" type="number" disabled="disabled" value="@{warding_bonus}+@{resolve}+@{confidence}+@{warding_special}+@{warding_mod}">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>&nbsp;</td>
+                <td class="topalign">
+                    <table>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Ranks</th>
+                            <th>Bonus</th>
+                            <th>Special</th>
+                            <th>Modifier</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Outdoors</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_animalhandling_check" type="roll" value="/me rolls Animal Handling: [[1d100+@{animalhandling}]]"></button>
+        						Animal Handling
+        					</td>
+                            <td><input name="attr_animalhandling_ranks" type="number"></td>
+                            <td><input name="attr_animalhandling_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_animalhandling_special" type="number" value="0"></td>
+                            <td><input name="attr_animalhandling_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_animalhandling" type="number" disabled="disabled" value="@{animalhandling_bonus}+@{resolve}+@{presence}+@{animalhandling_special}+@{animalhandling_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_horticulture_check" type="roll" value="/me rolls Horticulture: [[1d100+@{horticulture}]]"></button>
+        						Horticulture
+        					</td>
+                            <td><input name="attr_horticulture_ranks" type="number"></td>
+                            <td><input name="attr_horticulture_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_horticulture_special" type="number" value="0"></td>
+                            <td><input name="attr_horticulture_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_horticulture" type="number" disabled="disabled" value="@{horticulture_bonus}+@{logic}+@{wits}+@{horticulture_special}+@{horticulture_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_navigation_check" type="roll" value="/me rolls Navigation: [[1d100+@{navigation}]]"></button>
+        						Navigation
+        					</td>
+                            <td><input name="attr_navigation_ranks" type="number"></td>
+                            <td><input name="attr_navigation_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_navigation_special" type="number" value="0"></td>
+                            <td><input name="attr_navigation_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_navigation" type="number" disabled="disabled" value="@{navigation_bonus}+@{wits}+@{resolve}+@{navigation_special}+@{navigation_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_perception_check" type="roll" value="/me rolls Perception: [[1d100+@{perception}]]"></button>
+        						Perception
+        					</td>
+                            <td><input name="attr_perception_ranks" type="number"></td>
+                            <td><input name="attr_perception_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_perception_special" type="number" value="0"></td>
+                            <td><input name="attr_perception_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_perception" type="number" disabled="disabled" value="@{perception_bonus}+@{wits}+@{confidence}+@{perception_special}+@{perception_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_riding_check" type="roll" value="/me rolls Riding: [[1d100+@{riding}]]"></button>
+        						Riding
+        					</td>
+                            <td><input name="attr_riding_ranks" type="number"></td>
+                            <td><input name="attr_riding_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_riding_special" type="number" value="0"></td>
+                            <td><input name="attr_riding_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_riding" type="number" disabled="disabled" value="@{riding_bonus}+@{dexterity}+@{confidence}+@{riding_special}+@{riding_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_sailing_check" type="roll" value="/me rolls Sailing: [[1d100+@{sailing}]]"></button>
+        						Sailing
+        					</td>
+                            <td><input name="attr_sailing_ranks" type="number"></td>
+                            <td><input name="attr_sailing_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_sailing_special" type="number" value="0"></td>
+                            <td><input name="attr_sailing_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_sailing" type="number" disabled="disabled" value="@{sailing_bonus}+@{fortitude}+@{wits}+@{sailing_special}+@{sailing_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_survival_check" type="roll" value="/me rolls Survival: [[1d100+@{survival}]]"></button>
+        						Survival
+        					</td>
+                            <td><input name="attr_survival_ranks" type="number"></td>
+                            <td><input name="attr_survival_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_survival_special" type="number" value="0"></td>
+                            <td><input name="attr_survival_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_survival" type="number" disabled="disabled" value="@{survival_bonus}+@{logic}+@{resolve}+@{survival_special}+@{survival_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_tracking_check" type="roll" value="/me rolls Tracking: [[1d100+@{tracking}]]"></button>
+        						Tracking
+        					</td>
+                            <td><input name="attr_tracking_ranks" type="number"></td>
+                            <td><input name="attr_tracking_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_tracking_special" type="number" value="0"></td>
+                            <td><input name="attr_tracking_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_tracking" type="number" disabled="disabled" value="@{tracking_bonus}+@{wits}+@{resolve}+@{tracking_special}+@{tracking_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_traps_check" type="roll" value="/me rolls Traps: [[1d100+@{traps}]]"></button>
+        						Traps
+        					</td>
+                            <td><input name="attr_traps_ranks" type="number"></td>
+                            <td><input name="attr_traps_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_traps_special" type="number" value="0"></td>
+                            <td><input name="attr_traps_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_traps" type="number" disabled="disabled" value="@{traps_bonus}+@{wits}+@{manipulate}+@{traps_special}+@{traps_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Physical</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_acrobatics_check" type="roll" value="/me rolls Acrobatics: [[1d100+@{acrobatics}]]"></button>
+        						Acrobatics
+        					</td>
+                            <td><input name="attr_acrobatics_ranks" type="number"></td>
+                            <td><input name="attr_acrobatics_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_acrobatics_special" type="number" value="0"></td>
+                            <td><input name="attr_acrobatics_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_acrobatics" type="number" disabled="disabled" value="@{acrobatics_bonus}+@{dexterity}+@{confidence}+@{acrobatics_special}+@{acrobatics_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_athletics_check" type="roll" value="/me rolls Athletics: [[1d100+@{athletics}]]"></button>
+        						Athletics
+        					</td>
+                            <td><input name="attr_athletics_ranks" type="number"></td>
+                            <td><input name="attr_athletics_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_athletics_special" type="number" value="0"></td>
+                            <td><input name="attr_athletics_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_athletics" type="number" disabled="disabled" value="@{athletics_bonus}+@{strength}+@{fortitude}+@{athletics_special}+@{athletics_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_climbing_check" type="roll" value="/me rolls Climbing: [[1d100+@{climbing}]]"></button>
+        						Climbing
+        					</td>
+                            <td><input name="attr_climbing_ranks" type="number"></td>
+                            <td><input name="attr_climbing_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_climbing_special" type="number" value="0"></td>
+                            <td><input name="attr_climbing_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_climbing" type="number" disabled="disabled" value="@{climbing_bonus}+@{strength}+@{dexterity}+@{climbing_special}+@{climbing_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_contortions_check" type="roll" value="/me rolls Contortions: [[1d100+@{contortions}]]"></button>
+        						Contortions
+        					</td>
+                            <td><input name="attr_contortions_ranks" type="number"></td>
+                            <td><input name="attr_contortions_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_contortions_special" type="number" value="0"></td>
+                            <td><input name="attr_contortions_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_contortions" type="number" disabled="disabled" value="@{contortions_bonus}+@{dexterity}+@{wits}+@{contortions_special}+@{contortions_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_endurance_check" type="roll" value="/me rolls Endurance: [[1d100+@{endurance}]]"></button>
+        						Endurance
+        					</td>
+                            <td><input name="attr_endurance_ranks" type="number"></td>
+                            <td><input name="attr_endurance_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_endurance_special" type="number" value="0"></td>
+                            <td><input name="attr_endurance_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_endurance" type="number" disabled="disabled" value="@{endurance_bonus}+@{fortitude}+@{resolve}+@{endurance_special}+@{endurance_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_gliding_check" type="roll" value="/me rolls Gliding: [[1d100+@{gliding}]]"></button>
+        						Gliding
+        					</td>
+                            <td><input name="attr_gliding_ranks" type="number"></td>
+                            <td><input name="attr_gliding_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_gliding_special" type="number" value="0"></td>
+                            <td><input name="attr_gliding_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_gliding" type="number" disabled="disabled" value="@{gliding_bonus}+@{dexterity}+@{wits}+@{gliding_special}+@{gliding_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_jumping_check" type="roll" value="/me rolls Jumping: [[1d100+@{jumping}]]"></button>
+        						Jumping
+        					</td>
+                            <td><input name="attr_jumping_ranks" type="number"></td>
+                            <td><input name="attr_jumping_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_jumping_special" type="number" value="0"></td>
+                            <td><input name="attr_jumping_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_jumping" type="number" disabled="disabled" value="@{jumping_bonus}+@{strength}+@{dexterity}+@{jumping_special}+@{jumping_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_swimming_check" type="roll" value="/me rolls Swimming: [[1d100+@{swimming}]]"></button>
+        						Swimming
+        					</td>
+                            <td><input name="attr_swimming_ranks" type="number"></td>
+                            <td><input name="attr_swimming_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_swimming_special" type="number" value="0"></td>
+                            <td><input name="attr_swimming_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_swimming" type="number" disabled="disabled" value="@{swimming_bonus}+@{strength}+@{wits}+@{swimming_special}+@{swimming_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Social</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_composure_check" type="roll" value="/me rolls Composure: [[1d100+@{composure}]]"></button>
+        						Composure
+        					</td>
+                            <td><input name="attr_composure_ranks" type="number"></td>
+                            <td><input name="attr_composure_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_composure_special" type="number" value="0"></td>
+                            <td><input name="attr_composure_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_composure" type="number" disabled="disabled" value="@{composure_bonus}+@{resolve}+@{confidence}+@{composure_special}+@{composure_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_diplomacy_check" type="roll" value="/me rolls Diplomacy: [[1d100+@{diplomacy}]]"></button>
+        						Diplomacy
+        					</td>
+                            <td><input name="attr_diplomacy_ranks" type="number"></td>
+                            <td><input name="attr_diplomacy_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_diplomacy_special" type="number" value="0"></td>
+                            <td><input name="attr_diplomacy_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_diplomacy" type="number" disabled="disabled" value="@{diplomacy_bonus}+@{presence}+@{manipulate}+@{diplomacy_special}+@{diplomacy_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_expression_check" type="roll" value="/me rolls Expression: [[1d100+@{expression}]]"></button>
+        						Expression
+        					</td>
+                            <td><input name="attr_expression_ranks" type="number"></td>
+                            <td><input name="attr_expression_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_expression_special" type="number" value="0"></td>
+                            <td><input name="attr_expression_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_expression" type="number" disabled="disabled" value="@{expression_bonus}+@{wits}+@{manipulate}+@{expression_special}+@{expression_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_insight_check" type="roll" value="/me rolls Insight: [[1d100+@{insight}]]"></button>
+        						Insight
+        					</td>
+                            <td><input name="attr_insight_ranks" type="number"></td>
+                            <td><input name="attr_insight_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_insight_special" type="number" value="0"></td>
+                            <td><input name="attr_insight_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_insight" type="number" disabled="disabled" value="@{insight_bonus}+@{wits}+@{confidence}+@{insight_special}+@{insight_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_intimidation_check" type="roll" value="/me rolls Intimidation: [[1d100+@{intimidation}]]"></button>
+        						Intimidation
+        					</td>
+                            <td><input name="attr_intimidation_ranks" type="number"></td>
+                            <td><input name="attr_intimidation_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_intimidation_special" type="number" value="0"></td>
+                            <td><input name="attr_intimidation_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_intimidation" type="number" disabled="disabled" value="@{intimidation_bonus}+@{presence}+@{confidence}+@{intimidation_special}+@{intimidation_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_persuasion_check" type="roll" value="/me rolls Persuasion: [[1d100+@{persuasion}]]"></button>
+        						Persuasion
+        					</td>
+                            <td><input name="attr_persuasion_ranks" type="number"></td>
+                            <td><input name="attr_persuasion_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_persuasion_special" type="number" value="0"></td>
+                            <td><input name="attr_persuasion_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_persuasion" type="number" disabled="disabled" value="@{persuasion_bonus}+@{logic}+@{presence}+@{persuasion_special}+@{persuasion_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_trading_check" type="roll" value="/me rolls Trading: [[1d100+@{trading}]]"></button>
+        						Trading
+        					</td>
+                            <td><input name="attr_trading_ranks" type="number"></td>
+                            <td><input name="attr_trading_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_trading_special" type="number" value="0"></td>
+                            <td><input name="attr_trading_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_trading" type="number" disabled="disabled" value="@{trading_bonus}+@{wits}+@{presence}+@{trading_special}+@{trading_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Subterfuge</th>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_ambush_check" type="roll" value="/me rolls Ambush: [[1d100+@{ambush}]]"></button>
+        						Ambush
+        					</td>
+                            <td><input name="attr_ambush_ranks" type="number"></td>
+                            <td><input name="attr_ambush_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_ambush_special" type="number" value="0"></td>
+                            <td><input name="attr_ambush_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_ambush" type="number" disabled="disabled" value="@{ambush_bonus}+@{dexterity}+@{logic}+@{ambush_special}+@{ambush_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_deception_check" type="roll" value="/me rolls Deception: [[1d100+@{deception}]]"></button>
+        						Deception
+        					</td>
+                            <td><input name="attr_deception_ranks" type="number"></td>
+                            <td><input name="attr_deception_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_deception_special" type="number" value="0"></td>
+                            <td><input name="attr_deception_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_deception" type="number" disabled="disabled" value="@{deception_bonus}+@{presence}+@{manipulate}+@{deception_special}+@{deception_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_disarm_check" type="roll" value="/me rolls Disarm: [[1d100+@{disarm}]]"></button>
+        						Disarm
+        					</td>
+                            <td><input name="attr_disarm_ranks" type="number"></td>
+                            <td><input name="attr_disarm_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_disarm_special" type="number" value="0"></td>
+                            <td><input name="attr_disarm_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_disarm" type="number" disabled="disabled" value="@{disarm_bonus}+@{dexterity}+@{confidence}+@{disarm_special}+@{disarm_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_disguise_check" type="roll" value="/me rolls Disquise: [[1d100+@{disguise}]]"></button>
+        						Disguise
+        					</td>
+                            <td><input name="attr_disguise_ranks" type="number"></td>
+                            <td><input name="attr_disguise_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_disguise_special" type="number" value="0"></td>
+                            <td><input name="attr_disguise_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_disguise" type="number" disabled="disabled" value="@{disguise_bonus}+@{dexterity}+@{manipulate}+@{disguise_special}+@{disguise_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_hiding_check" type="roll" value="/me rolls Hiding: [[1d100+@{hiding}]]"></button>
+        						Hiding
+        					</td>
+                            <td><input name="attr_hiding_ranks" type="number"></td>
+                            <td><input name="attr_hiding_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_hiding_special" type="number" value="0"></td>
+                            <td><input name="attr_hiding_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_hiding" type="number" disabled="disabled" value="@{hiding_bonus}+@{wits}+@{confidence}+@{hiding_special}+@{hiding_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_larceny_check" type="roll" value="/me rolls Larceny: [[1d100+@{larceny}]]"></button>
+        						Larceny
+        					</td>
+                            <td><input name="attr_larceny_ranks" type="number"></td>
+                            <td><input name="attr_larceny_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_larceny_special" type="number" value="0"></td>
+                            <td><input name="attr_larceny_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_larceny" type="number" disabled="disabled" value="@{larceny_bonus}+@{dexterity}+@{resolve}+@{larceny_special}+@{larceny_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_sleightofhand_check" type="roll" value="/me rolls Sleight of Hand: [[1d100+@{sleightofhand}]]"></button>
+        						Sleight of Hand
+        					</td>
+                            <td><input name="attr_sleightofhand_ranks" type="number"></td>
+                            <td><input name="attr_sleightofhand_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_sleightofhand_special" type="number" value="0"></td>
+                            <td><input name="attr_sleightofhand_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_sleightofhand" type="number" disabled="disabled" value="@{sleightofhand_bonus}+@{dexterity}+@{manipulate}+@{sleightofhand_special}+@{sleightofhand_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_sniping_check" type="roll" value="/me rolls Sniping: [[1d100+@{sniping}]]"></button>
+        						Sniping
+        					</td>
+                            <td><input name="attr_sniping_ranks" type="number"></td>
+                            <td><input name="attr_sniping_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_sniping_special" type="number" value="0"></td>
+                            <td><input name="attr_sniping_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_sniping" type="number" disabled="disabled" value="@{sniping_bonus}+@{dexterity}+@{wits}+@{sniping_special}+@{sniping_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_stalking_check" type="roll" value="/me rolls Stalking: [[1d100+@{stalking}]]"></button>
+        						Stalking
+        					</td>
+                            <td><input name="attr_stalking_ranks" type="number"></td>
+                            <td><input name="attr_stalking_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_stalking_special" type="number" value="0"></td>
+                            <td><input name="attr_stalking_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_stalking" type="number" disabled="disabled" value="@{stalking_bonus}+@{dexterity}+@{resolve}+@{stalking_special}+@{stalking_mod}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+        						<button name="roll_streetwise_check" type="roll" value="/me rolls Streetwise: [[1d100+@{streetwise}]]"></button>
+        						Streetwise
+        					</td>
+                            <td><input name="attr_streetwise_ranks" type="number"></td>
+                            <td><input name="attr_streetwise_bonus" tabindex="-1"readonly="readonly" type="number" value="0"></td>
+                            <td><input name="attr_streetwise_special" type="number" value="0"></td>
+                            <td><input name="attr_streetwise_mod" type="number" value="0"></td>
+                            <td>
+                                <input name="attr_streetwise" type="number" disabled="disabled" value="@{streetwise_bonus}+@{wits}+@{presence}+@{streetwise_special}+@{streetwise_mod}">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+         </table>
+        </div>
+
+    <div class="sheet-section-equipment">
+        <div class="sheet-pc-equipment">
+			<div style="float: left">
+				<table cellpadding="10" cellspacing="0">
+					<tr>
+						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;" data-i18n="equipment"Equipment /td>
+					</tr>
+				</table>
+				<br>
+				<div class="sheet-pc-singleuseequipment">
+					<div style="float: left">
+						<br>
+						<fieldset class="repeating_magicitems">
+							<table>
+								<tr>
+									<td style="width: 790px;"><input type="text" name="attr_singleusemagicitems" title="repeating_magicitems_#_singleusemagicitem" style="width: 790px;"></td>
+								</tr>
+							</table>
+						</fieldset>
+					</div>
+					<hr/>
+			    </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="sheet-section-spells">
+        <div class="sheet-pc-spells">
+			<div style="float: left">
+				<table cellpadding="10" cellspacing="0">
+					<tr>
+						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;" data-i18n="spells">Spells</td>
+					</tr>
+				</table>
+				<br>
+				<div class="sheet-pc-singleuseequipment">
+					<div style="float: left">
+						<br>
+						<fieldset class="repeating_magicitems">
+							<table>
+								<tr>
+									<td style="width: 790px;"><input type="text" name="attr_singleusemagicitems" title="repeating_magicitems_#_singleusemagicitem" style="width: 790px;"></td>
+								</tr>
+							</table>
+						</fieldset>
+					</div>
+					<hr/>
+				</div>
+            <div class="sheet-col-right">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="sheet-col-right">
+    
+<script type="text/worker">
+
+on("change:appraisal_ranks change:chemistry_ranks change:cultures_ranks change:history_ranks change:investigation_ranks change:medicine_ranks change:nature_ranks change:pantheons_ranks change:politics_ranks change:acting_ranks change:crafting_ranks change:dancing_ranks change:mimicry_ranks change:instruments_ranks change:publicspeaking_ranks change:singing_ranks change:storytelling_ranks change:trickery_ranks change:armor_ranks change:brawling_ranks change:conditioning_ranks change:initiative_ranks change:martialarts_ranks change:reflexes_ranks change:weaponry_ranks change:rageofberserker_ranks change:burstofcelerity_ranks change:perfectionoffocus_ranks change:bodyofiron_ranks change:alchemy_ranks change:arcana_ranks change:attunement_ranks change:cantrips_ranks change:casting_ranks change:mana_ranks change:ritual_ranks change:runes_ranks change:signaling_ranks change:wandage_ranks change:warding_ranks change:animalhandling_ranks change:horticulture_ranks change:navigation_ranks change:perception_ranks change:riding_ranks change:sailing_ranks change:survival_ranks change:tracking_ranks change:traps_ranks change:acrobatics_ranks change:athletics_ranks change:climbing_ranks change:contortions_ranks change:endurance_ranks change:gliding_ranks change:jumping_ranks change:swimming_ranks change:composure_ranks change:diplomacy_ranks change:expression_ranks change:insight_ranks change:intimidation_ranks change:persuasion_ranks change:trading_ranks change:ambush_ranks change:deception_ranks change:disarm_ranks change:disguise_ranks change:hiding_ranks change:larceny_ranks change:sleightofhand_ranks change:sniping_ranks change:stalking_ranks streetwise_ranks", function(eventInfo) {
+    var target = /.*_/.exec(eventInfo.sourceAttribute) + "bonus";
+    var ranks = Number(eventInfo.newValue);
+    var attrs = {};
+    
+    if (ranks === NaN){
+        attrs[target] = 0;
+    }else{
+        var bonus = Math.min(ranks,10) * 5 + Math.max(Math.min(ranks-10, 10),0) * 2 + Math.max(ranks-20, 0);
+        attrs[target] = bonus;
+    }
+    
+    setAttrs(attrs);
+});
+
+</script>
